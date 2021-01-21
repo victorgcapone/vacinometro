@@ -21,6 +21,8 @@ data = pd.read_csv(data_file)
 data = data.drop_duplicates("Data")
 # Converte coluna de Data para formato DateTime
 data.Data = data.Data.astype("datetime64[ns]")
+# Adiciona a coluna Delta, a diferença da atualização anterior
+data['Delta'] = data.Vacinados - data.Vacinados.shift(1)
 
 # Salva com o nome "original_clean.csv"
 data.to_csv(f"{data_dir}/{data_file.split('.')[0]}_{prefix}.csv", index=False)
