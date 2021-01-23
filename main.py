@@ -17,7 +17,7 @@ def get_vacinados(driver):
 
 def get_data(driver):
     element = driver.find_element_by_class_name(DATE_CLASS_NAME)
-    text = element.text.split("em")[1].strip()
+    text = element.text.split(":")[1].strip()
     return text
 
 
