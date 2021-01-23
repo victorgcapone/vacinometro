@@ -3,7 +3,7 @@ import pandas as pd
 import sched, time
 
 URL = "https://www.saopaulo.sp.gov.br/"
-VACINOMETRO_CLASS_NAME="tableauPlaceholder"
+VACINOMETRO_CLASS_NAME="container-numeros-vacinados"
 DATE_CLASS_NAME="data-atualizacao-vac"
 
 vacinados = pd.read_csv("vacinados.csv")
