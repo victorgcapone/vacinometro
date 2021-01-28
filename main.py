@@ -29,7 +29,7 @@ def fetch_data(vacinados):
     print(new_data)
     vacinados = vacinados.append(pd.DataFrame(new_data), ignore_index=True)
     vacinados.to_csv("vacinados.csv", index=False)
-    s.enter(300, 1, fetch_data, (vacinados,))
+    s.enter(1800, 1, fetch_data, (vacinados,))
 
 
 s.enter(300, 1, fetch_data, (vacinados,))
