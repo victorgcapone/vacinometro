@@ -20,7 +20,7 @@ data = pd.read_csv(data_file)
 # Remove linhas cujo a data de atualização estão duplicadas
 data = data.drop_duplicates("Data")
 # Converte coluna de Data para formato DateTime
-data.Data = data.Data.astype("datetime64[ns]")
+data.Data = pd.to_datetime(data.Data, format="%d/%m/%Y %H:%M")
 # Adiciona a coluna Delta, a diferença da atualização anterior
 data['Delta'] = data.Vacinados - data.Vacinados.shift(1)
 
