@@ -1,6 +1,8 @@
 name: vacinometro
 channels:
+  - conda-forge
   - defaults
+  - conda-forge/label/broken
 dependencies:
   - _libgcc_mutex=0.1=main
   - backcall=0.2.0=py_0

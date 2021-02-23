@@ -32,5 +32,5 @@ def fetch_data(vacinados):
     s.enter(1800, 1, fetch_data, (vacinados,))
 
 
-s.enter(300, 1, fetch_data, (vacinados,))
+s.enter(5, 1, fetch_data, (vacinados,))
 s.run()
